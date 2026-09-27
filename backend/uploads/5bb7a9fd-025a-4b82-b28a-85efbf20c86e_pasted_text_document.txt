@@ -1,0 +1,887 @@
+BUILD A SIMPLE FULL-STACK WEBSITE CALLED “UNTRACEX”
+
+UntraceX is a document inspection and cleaning application.
+
+The main purpose is:
+
+UPLOAD DOCUMENT
+↓
+DETECT AI-RELATED WRITING INDICATORS
+↓
+SHOW AI-GENERATED / HUMAN-LIKE ESTIMATE
+↓
+HIGHLIGHT DETECTED AI-RELATED TEXT PATTERNS
+↓
+DETECT DOCUMENT METADATA
+↓
+HIGHLIGHT METADATA INFORMATION
+↓
+USER SELECTS WHAT TO REMOVE
+↓
+REMOVE SUPPORTED INFORMATION
+↓
+COMPARE BEFORE VS AFTER
+↓
+DOWNLOAD CLEANED DOCUMENT
+
+Keep the application simple, clean and professional.
+
+Do NOT create a complicated enterprise dashboard.
+
+==================================================
+1. TECHNOLOGY STACK
+==================================================
+
+Frontend:
+React
+Vite
+React Router
+Tailwind CSS
+Lucide React
+
+Backend:
+Python
+FastAPI
+
+Database:
+SQLite
+
+File processing:
+PyMuPDF for PDF
+python-docx for DOCX
+python-pptx for PPTX
+
+NLP:
+Python NLP/statistical analysis
+
+AI:
+Use an AI/NLP analysis service for estimating whether the writing
+contains characteristics associated with AI-generated text.
+
+IMPORTANT:
+
+Do not claim that the system can prove authorship.
+
+The result must be presented as an estimate based on detected
+linguistic characteristics.
+
+==================================================
+2. LOGIN
+==================================================
+
+Keep login extremely simple.
+
+LOGIN
+
+Email
+Password
+
+[ LOGIN ]
+
+REGISTER
+
+Name
+Email
+Password
+
+[ CREATE ACCOUNT ]
+
+After login:
+
+/dashboard
+
+Every user's documents must remain private.
+
+==================================================
+3. SIMPLE WEBSITE STRUCTURE
+==================================================
+
+Sidebar:
+
+UNTRACEX
+
+Dashboard
+Analyze
+History
+Settings
+
+Logout
+
+Do NOT add unnecessary pages.
+
+==================================================
+4. DASHBOARD
+==================================================
+
+Show:
+
+UNTRACEX
+
+Inspect. Detect. Clean.
+
+Short description:
+
+“Analyze your documents for AI-related writing indicators and
+document metadata, then clean supported information.”
+
+Main button:
+
+[ UPLOAD DOCUMENT ]
+
+Recent documents appear below.
+
+For a new account:
+
+“No documents uploaded yet.”
+
+Do NOT show fake documents or fake statistics.
+
+==================================================
+5. UPLOAD
+==================================================
+
+Support:
+
+PDF
+DOCX
+PPTX
+TXT
+
+Upload page:
+
+-------------------------------------
+
+UPLOAD YOUR DOCUMENT
+
+Drag and drop your file here
+
+PDF • DOCX • PPTX • TXT
+
+[ CHOOSE FILE ]
+
+or
+
+[ PASTE TEXT ]
+
+-------------------------------------
+
+After uploading:
+
+Scanning document...
+
+Extracting content...
+
+Checking document information...
+
+Analyzing writing patterns...
+
+==================================================
+6. MAIN ANALYSIS PAGE
+==================================================
+
+This page must be VERY clear.
+
+Do NOT create seven large analysis cards.
+
+The page should have four sections:
+
+1. AI CONTENT RESULT
+2. AI-RELATED TEXT HIGHLIGHTS
+3. METADATA INFORMATION
+4. BEFORE / AFTER CLEANING
+
+==================================================
+7. AI CONTENT RESULT
+==================================================
+
+At the very top:
+
+AI CONTENT ANALYSIS
+
+Show:
+
+ESTIMATED AI-GENERATED CONTENT
+
+                 XX%
+
+and:
+
+HUMAN-LIKE CONTENT
+
+                 XX%
+
+Example:
+
+AI-GENERATED
+78%
+
+HUMAN-LIKE
+22%
+
+The percentage must be generated from the actual analysis.
+
+Do NOT hard-code 78%.
+
+Use labels:
+
+LOW
+MODERATE
+ELEVATED
+
+Example:
+
+78%
+
+ELEVATED AI-RELATED INDICATORS
+
+Add a small explanation:
+
+“This is an analytical estimate based on linguistic characteristics.
+It is not definitive proof of AI authorship.”
+
+Do NOT claim:
+
+“This document is definitely AI-generated.”
+
+==================================================
+8. AI-RELATED TEXT HIGHLIGHTING
+==================================================
+
+THIS IS ONE OF THE MOST IMPORTANT FEATURES.
+
+Show the actual extracted text.
+
+Example:
+
+-------------------------------------
+
+DOCUMENT CONTENT
+
+Python is a high-level programming language
+that is widely used for software development.
+It provides a simple and readable syntax and
+supports multiple programming paradigms.
+
+-------------------------------------
+
+If the analysis identifies sentences or phrases
+with stronger AI-associated linguistic patterns,
+highlight those portions in RED.
+
+Example:
+
+Python is a high-level programming language
+that is widely used for software development.
+
+The highlighted section should be clearly visible.
+
+Use:
+
+RED = AI-related writing indicator
+
+YELLOW = possible / moderate indicator
+
+NORMAL = no significant indicator detected
+
+Do NOT highlight random text.
+
+The highlights must come from the actual analysis results.
+
+==================================================
+9. AI TRACE PANEL
+==================================================
+
+Beside the document text show:
+
+AI-RELATED WRITING INDICATORS
+
+🔴 High indicator
+🟡 Moderate indicator
+⚪ No significant indicator
+
+For each highlighted section:
+
+Show:
+
+Detected pattern:
+Formulaic wording
+
+or:
+
+Detected pattern:
+High structural regularity
+
+or:
+
+Detected pattern:
+Repeated phrase pattern
+
+Keep the explanation short.
+
+Example:
+
+HIGHLIGHTED TEXT
+
+“...”
+
+Reason:
+Highly formulaic sentence structure.
+
+Do NOT call these phrases definitive “AI traces”.
+
+Use:
+
+“AI-related writing indicator”
+
+because linguistic patterns alone cannot prove AI authorship.
+
+==================================================
+10. DOCUMENT METADATA
+==================================================
+
+Below or beside the text:
+
+DOCUMENT METADATA
+
+Show actual metadata extracted from the uploaded file.
+
+Examples:
+
+Author
+John Smith
+
+Created
+12 Aug 2026
+
+Modified
+15 Aug 2026
+
+Application
+Microsoft PowerPoint
+
+Last Modified By
+John Smith
+
+Company
+ABC
+
+Revision
+5
+
+Creator
+Microsoft Office
+
+Producer
+Microsoft
+
+Only display fields that actually exist.
+
+If unavailable:
+
+Not available
+
+NEVER invent metadata.
+
+==================================================
+11. METADATA HIGHLIGHTING
+==================================================
+
+Metadata that exists should be visually highlighted.
+
+Use RED as the main “detected information” highlight.
+
+Example:
+
+🔴 Author
+John Smith
+
+🔴 Application
+Microsoft PowerPoint
+
+🔴 Created
+12 Aug 2026
+
+The user should immediately understand:
+
+“These are the pieces of information detected in my document.”
+
+IMPORTANT:
+
+Do not pretend metadata is part of the visible document text.
+
+Clearly separate:
+
+DOCUMENT TEXT
+
+and
+
+DOCUMENT METADATA.
+
+==================================================
+12. REMOVE INFORMATION
+==================================================
+
+Each detected metadata field should have:
+
+[✓] Author
+John Smith
+
+[✓] Application
+Microsoft PowerPoint
+
+[✓] Created
+12 Aug 2026
+
+The user can select what to remove.
+
+Main button:
+
+[ REMOVE SELECTED INFORMATION ]
+
+Then show:
+
+Removing selected information...
+
+After completion:
+
+CLEANING COMPLETE
+
+Example:
+
+Author → Removed
+Application → Removed
+Created → Removed
+
+Only show “Removed” if the backend actually removed it.
+
+==================================================
+13. AI TEXT CLEANING
+==================================================
+
+For supported editable text content, allow the user to select
+AI-related highlighted text and choose:
+
+[ IMPROVE SELECTED TEXT ]
+
+The system can rewrite selected text to improve:
+
+Sentence flow
+Readability
+Repetition
+Natural variation
+
+Preserve:
+
+Meaning
+Important facts
+Technical terms
+
+The resulting text must be editable.
+
+Do NOT promise that the rewritten text will bypass AI detectors.
+
+==================================================
+14. BEFORE AND AFTER
+==================================================
+
+This is another major feature.
+
+After cleaning/improvement, show:
+
+BEFORE
+
+Original document/text
+
+and:
+
+AFTER
+
+Cleaned/improved document/text
+
+Use a simple side-by-side layout on desktop.
+
+On mobile:
+
+BEFORE
+↓
+
+AFTER
+
+==================================================
+15. DIFFERENCE HIGHLIGHTING
+==================================================
+
+Show actual changes.
+
+RED:
+
+Removed text
+
+GREEN:
+
+Added text
+
+YELLOW:
+
+Changed text
+
+Example:
+
+BEFORE:
+
+Python is a high-level programming language
+that is widely used.
+
+AFTER:
+
+Python is a high-level language commonly used
+for software development.
+
+Highlight the actual changed portions.
+
+Do not generate fake differences.
+
+==================================================
+16. METADATA BEFORE / AFTER
+==================================================
+
+Also show:
+
+METADATA BEFORE
+
+Author: John Smith
+Application: PowerPoint
+Created: 12 Aug 2026
+
+METADATA AFTER
+
+Author: Removed
+Application: Removed
+Created: Removed
+
+This makes the cleaning process easy to demonstrate.
+
+==================================================
+17. DOWNLOAD
+==================================================
+
+After cleaning:
+
+YOUR CLEANED DOCUMENT IS READY
+
+[ DOWNLOAD CLEANED FILE ]
+
+The downloaded file must actually be generated by the backend.
+
+Also provide:
+
+[ VIEW BEFORE ]
+[ VIEW AFTER ]
+
+==================================================
+18. HISTORY
+==================================================
+
+Keep History simple.
+
+Show:
+
+Filename
+Date
+AI estimate
+Cleaning status
+
+Example:
+
+lecture.pdf
+27 Sep 2026
+AI estimate: 64%
+Metadata cleaned
+
+Only show the current user's documents.
+
+==================================================
+19. DATABASE
+==================================================
+
+Use SQLite.
+
+Tables:
+
+users
+
+documents
+
+analyses
+
+metadata
+
+cleaning_actions
+
+users:
+
+id
+name
+email
+password_hash
+created_at
+
+documents:
+
+id
+user_id
+filename
+file_type
+file_size
+file_path
+extracted_text
+created_at
+
+analyses:
+
+id
+document_id
+ai_likelihood
+indicator_level
+signals
+created_at
+
+metadata:
+
+id
+document_id
+field_name
+field_value
+removable
+removed
+
+cleaning_actions:
+
+id
+document_id
+removed_metadata
+text_changes
+created_at
+
+==================================================
+20. BACKEND PROCESS
+==================================================
+
+When a file is uploaded:
+
+STEP 1
+Store the file.
+
+STEP 2
+Extract its text.
+
+STEP 3
+Extract supported metadata.
+
+STEP 4
+Analyze the extracted text for AI-related linguistic indicators.
+
+STEP 5
+Calculate an estimated AI-related likelihood.
+
+STEP 6
+Identify text sections associated with the detected indicators.
+
+STEP 7
+Return the text with highlight positions.
+
+STEP 8
+Display metadata.
+
+STEP 9
+Allow user to select removable metadata.
+
+STEP 10
+Create cleaned document.
+
+STEP 11
+Compare before and after.
+
+STEP 12
+Allow download.
+
+==================================================
+21. API
+==================================================
+
+POST /api/auth/register
+POST /api/auth/login
+
+POST /api/documents/upload
+
+GET /api/documents
+
+GET /api/documents/{id}
+
+POST /api/documents/{id}/analyze
+
+GET /api/documents/{id}/analysis
+
+POST /api/documents/{id}/clean
+
+POST /api/documents/{id}/improve
+
+GET /api/documents/{id}/compare
+
+GET /api/documents/{id}/download
+
+==================================================
+22. ANALYSIS RESPONSE
+==================================================
+
+Return structured data such as:
+
+{
+  "ai_likelihood": 78,
+  "level": "elevated",
+
+  "signals": [
+    {
+      "text": "actual detected sentence",
+      "start": 120,
+      "end": 245,
+      "level": "high",
+      "reason": "Formulaic sentence structure"
+    }
+  ],
+
+  "metadata": [
+    {
+      "name": "Author",
+      "value": "John Smith",
+      "removable": true
+    },
+    {
+      "name": "Application",
+      "value": "Microsoft PowerPoint",
+      "removable": true
+    }
+  ]
+}
+
+The frontend must use these actual values.
+
+==================================================
+23. IMPORTANT LIMITATIONS
+==================================================
+
+The application must clearly distinguish between:
+
+AI-related linguistic indicators
+
+and
+
+actual proof of AI authorship.
+
+The system cannot determine with certainty whether a human or AI
+wrote a document based only on text patterns.
+
+Similarly, “metadata removal” only applies to metadata that the
+application actually supports and can modify.
+
+Never claim:
+
+“Everything hidden has been removed.”
+
+Instead say:
+
+“Supported metadata removed successfully.”
+
+==================================================
+24. DESIGN
+==================================================
+
+Keep the design extremely simple.
+
+White/off-white background
+Dark text
+Gray borders
+One accent color
+
+Use RED specifically for detected AI-related text indicators
+and detected metadata.
+
+Use:
+
+RED = detected/high indicator
+YELLOW = possible/moderate indicator
+GREEN = cleaned/removed successfully
+
+Avoid:
+
+Neon
+Gradients
+3D
+Glowing cards
+Excessive animations
+Huge statistics
+Complicated graphs
+AI robot images
+Unnecessary decorative elements
+
+==================================================
+25. FINAL USER EXPERIENCE
+==================================================
+
+The entire product should feel like this:
+
+LOGIN
+
+↓
+
+UPLOAD FILE
+
+↓
+
+SCANNING
+
+↓
+
+AI CONTENT RESULT
+
+“Estimated AI-generated content: 78%”
+
+↓
+
+DOCUMENT TEXT
+
+AI-related sections highlighted in RED
+
+↓
+
+METADATA
+
+Detected metadata highlighted in RED
+
+↓
+
+SELECT WHAT TO REMOVE
+
+↓
+
+REMOVE
+
+↓
+
+BEFORE vs AFTER
+
+Original
+vs
+Cleaned
+
+↓
+
+DOWNLOAD CLEANED FILE
+
+The user should understand the entire application without needing
+to read a long explanation.
+
+Make the website simple enough for a college project demonstration
+but polished enough to look like a real product.
+
+DO NOT ADD EXTRA FEATURES UNLESS THEY ARE NECESSARY FOR THIS FLOW.

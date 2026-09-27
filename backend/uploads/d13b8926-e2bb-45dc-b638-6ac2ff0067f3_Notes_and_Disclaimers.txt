@@ -1,0 +1,5 @@
+UNTRACEX PLAIN TEXT SPECIFICATION
+
+This is a plain text file.
+Plain text files do not contain embedded author or document property tags.
+UntraceX accurately reports file encoding and size without fabricating metadata.
