@@ -34,7 +34,7 @@ app = FastAPI(title="UntraceX API", version="2.0.0")
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://untracex.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
