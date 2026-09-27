@@ -1,4 +1,4 @@
-const API_BASE = 'https://untracex.onrender.com';
+const API_BASE = 'https://untracex.onrender.com/api';
 
 export const getAuthToken = () => {
   return localStorage.getItem('untracex_token');
