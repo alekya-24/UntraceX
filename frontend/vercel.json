@@ -1,4 +1,6 @@
+@'
 {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
     "rewrites": [
         {
             "source": "/(.*)",
@@ -6,3 +8,4 @@
         }
     ]
 }
+'@ | Set-Content frontend\vercel.json
